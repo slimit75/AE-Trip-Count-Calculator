@@ -1,0 +1,31 @@
+﻿<Window x:Class="AERoundtripCalc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AERoundtripCalc"
+        mc:Ignorable="d"
+        Title="AE Trip Count Calculator" Height="155" Width="307" ResizeMode="NoResize">
+    <Grid Background="#FF4F4F4F">
+        <TextBlock HorizontalAlignment="Left" Height="18.629" Margin="10,65.877,0,0" TextWrapping="Wrap" Text="Add this many flights:" VerticalAlignment="Top" Width="117.125" Foreground="White" FontFamily="Arial"/>
+        <TextBlock x:Name="Out" HorizontalAlignment="Left" Height="31.994" Margin="10,0,0,4.5" TextWrapping="Wrap" Text="----" VerticalAlignment="Bottom" Width="117.125" Foreground="White" FontSize="24" FontFamily="Arial"/>
+        <Button x:Name="Calculate" Click="Calculate_Click" Content="Calculate" HorizontalAlignment="Left" Height="50.623" Margin="165.868,63.43,0,10" Width="116.132" Foreground="White" Background="#FF898989" FontFamily="Arial" FontSize="24" BorderBrush="{x:Null}" VerticalAlignment="Bottom"/>
+        <TextBlock HorizontalAlignment="Left" Height="18.629" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.125" Foreground="White" FontFamily="Arial"><Run Text="Route Demand"/><Run Text=":"/></TextBlock>
+        <RichTextBox x:Name="InRoute" HorizontalAlignment="Left" Height="29.801" Margin="10,28.629,0,0" VerticalAlignment="Top" Width="117.125" FontSize="24" FontFamily="Arial" Block.TextAlignment="Center" Background="#FF898989" Foreground="White" BorderBrush="{x:Null}">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="0"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <TextBlock HorizontalAlignment="Left" Height="18.629" Margin="164.875,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.125" Foreground="White" FontFamily="Arial" Text="Aircraft Seats:"/>
+        <RichTextBox x:Name="InAircraft" HorizontalAlignment="Left" Height="29.801" Margin="164.875,28.629,0,0" VerticalAlignment="Top" Width="117.125" FontSize="24" FontFamily="Arial" Block.TextAlignment="Center" Background="#FF898989" Foreground="White" BorderBrush="{x:Null}">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="0"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</Window>
